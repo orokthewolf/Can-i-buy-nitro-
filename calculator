@@ -1,0 +1,17 @@
+money = int(input("How much money have you got ?"))
+whichone = input("You wanna subscribe to Classic or Booster ?")
+time = int(input("How many months would you want to buy ?"))
+
+if whichone == 'Classic':
+    price = 4.99
+else:
+    price = 9.99
+
+totalprice = time * price
+left = money - totalprice
+print("You will pay", totalprice, "dollars for", time, "subscribe months to Nitro", whichone, "!" )
+
+if left < 0:
+    print("You can't afford this subscribe")
+else:
+    print(left, "dollars will left.")
