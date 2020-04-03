@@ -1,0 +1,18 @@
+
+money = int(input("Combien d'argent avez vous ?"))
+whichone = input("Quel type d'abonnement choisissez vous ? (Classic ou Booster)")
+time = int(input("Durant combien de mois souhaitez vous etre abonné ?"))
+
+if whichone == 'Classic':
+    price = 4.99
+else:
+    price = 9.99
+
+totalprice = time * price
+left = money - totalprice
+print("Vous allez payer", totalprice, "euros pour", time, "mois d'abonnement à Nitro", whichone, "!" )
+
+if left < 0:
+    print("Vous ne pouvez pas payer cet abonnement")
+else:
+    print("Il vous restera", left, "euros.")
